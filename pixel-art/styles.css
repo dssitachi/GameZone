@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.box {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid black;
+}
+
+.board {
+    display: inline-grid;
+    grid-template-columns: repeat(10, 1fr);
+}
