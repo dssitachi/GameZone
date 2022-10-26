@@ -5,9 +5,7 @@
 }
 
 body {
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0F2027;
 }
 
 main {
@@ -16,6 +14,8 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 3;
 }
 
 .heading {
@@ -30,3 +30,50 @@ main {
 .img-size {
     height: 16rem;
 }
+
+.animation__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
