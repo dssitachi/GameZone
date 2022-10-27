@@ -19,12 +19,32 @@ main {
 }
 
 .heading {
-    color: white
+    color: white;
+    margin-top: 4rem;
 }
 
 .game-container {
     display: flex;
     gap: 2rem
+}
+
+.game__name {
+    font-size: 1.25em;
+    text-align: center;
+    color: #ff2d75
+}
+
+.button__container {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #4fc3dc;
+    padding: 1rem 2rem;
+    display: inline-block;
+    background-color: #0F2027;
+    border-radius: 10%;
 }
 
 .img-size {
